@@ -7,7 +7,7 @@ const Wishlist = () => {
     return (
         <View>
             <Header
-                headerName="Wishlist"
+                headerName="Wish list"
             />
             <ScrollView
                 showsVerticalScrollIndicator={false}

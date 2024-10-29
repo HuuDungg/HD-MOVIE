@@ -5,32 +5,37 @@ interface IProps {
     headerName?: string
 }
 
-const Header = (props: IProps,) => {
+const Header = (props: IProps) => {
     const { headerName = 'default' } = props;
     return (
         <XStack
             alignItems="center"
+            justifyContent="space-between" // Chia đều khoảng cách giữa các phần tử
+            px="$4" // Padding cho hai bên
             style={{
                 backgroundColor: '#03396c',
                 height: 100,
-                justifyContent: 'center',
             }}
         >
+            {/* Menu Icon */}
             <View
                 style={{
                     position: 'relative',
-                    top: 22,
-                    right: 120
+                    top: 22
                 }}
                 onPress={() => {
                 }}
             >
                 <AntDesign name="menufold" size={24} color="white" />
             </View>
+
+            {/* Header Text */}
             <View
                 style={{
                     position: 'relative',
-                    top: 22
+                    top: 22,
+                    flex: 1, // Chiếm hết không gian ở giữa để text nằm giữa
+                    alignItems: 'center',
                 }}
             >
                 <Text
@@ -42,17 +47,20 @@ const Header = (props: IProps,) => {
                     {headerName}
                 </Text>
             </View>
+
+            {/* Search Icon */}
             <View
                 style={{
                     position: 'relative',
-                    top: 22,
-                    left: 120
+                    top: 22
+                }}
+                onPress={() => {
                 }}
             >
                 <AntDesign name="search1" size={24} color="white" />
             </View>
         </XStack>
-    )
+    );
 }
 
-export default Header
+export default Header;

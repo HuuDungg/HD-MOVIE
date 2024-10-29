@@ -343,7 +343,7 @@ const DetailMovie = () => {
                 >
                     <H4>Comment</H4>
                     <InputComment size="$3" />
-                    <FlatList
+                    {/* <FlatList
                         data={fakeComments}
                         renderItem={({ item }) => (
                             <Comment
@@ -353,7 +353,10 @@ const DetailMovie = () => {
                             />
                         )}
                         keyExtractor={item => item.id}
-                    />
+                    /> */}
+                    <Comment />
+                    <Comment />
+                    <Comment />
                 </YStack>
             </YStack>
         </ScrollView>
