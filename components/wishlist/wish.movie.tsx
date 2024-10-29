@@ -146,7 +146,7 @@ const WishMovie = (props: IProps) => {
     const { dataList = fakeMovieData } = props;
     return (
         <YStack
-            marginHorizontal={10}
+            marginHorizontal={5}
             gap={10}
         >
             <XStack

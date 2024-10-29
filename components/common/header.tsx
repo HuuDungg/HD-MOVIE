@@ -40,7 +40,7 @@ const Header = (props: IProps) => {
             >
                 <Text
                     style={{
-                        fontSize: 25,
+                        fontSize: 20,
                         color: 'white',
                     }}
                 >

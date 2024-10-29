@@ -10,7 +10,7 @@ const ListMovie = (props: IProps) => {
     const { title, dataList } = props;
     return (
         <YStack
-            marginHorizontal={20}
+            marginHorizontal={5}
             gap={10}
         >
             <XStack>
