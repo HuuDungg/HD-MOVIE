@@ -10,7 +10,13 @@ const MovieTab = () => {
             <Header
                 headerName="Movie"
             />
-            <TabMovies />
+            <View
+                style={{
+                    marginBottom: 2400
+                }}
+            >
+                <TabMovies />
+            </View>
         </View>
     )
 }

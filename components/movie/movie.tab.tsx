@@ -1,15 +1,12 @@
 import { H5, Separator, SizableText, Tabs } from "tamagui"
 import type { TabsContentProps } from 'tamagui'
+import WishMovie from "../wishlist/wish.movie"
 const TabMovies = () => {
     return (
         <Tabs
             defaultValue="tab1"
-            orientation="horizontal"
             flexDirection="column"
-            width={400}
-            height={150}
-            borderRadius="$4"
-            borderWidth="$0.25"
+            height={680}
             overflow="hidden"
             borderColor="$borderColor"
         >
@@ -34,15 +31,18 @@ const TabMovies = () => {
 
             {/* tabs content */}
             <TabsContent value="tab1">
-                <H5>Profile</H5>
+                <WishMovie
+                />
             </TabsContent>
 
             <TabsContent value="tab2">
-                <H5>Connections</H5>
+                <WishMovie
+                />
             </TabsContent>
 
             <TabsContent value="tab3">
-                <H5>Notifications</H5>
+                <WishMovie
+                />
             </TabsContent>
         </Tabs>
     )
@@ -53,16 +53,14 @@ const TabsContent = (props: TabsContentProps) => {
         <Tabs.Content
             backgroundColor="$background"
             key="tab3"
-            padding="$2"
             alignItems="center"
             justifyContent="center"
             flex={1}
             borderColor="$background"
-            borderRadius="$2"
             borderTopLeftRadius={0}
             borderTopRightRadius={0}
-            borderWidth="$2"
             {...props}
+            height={'auto'}
         >
             {props.children}
         </Tabs.Content>
