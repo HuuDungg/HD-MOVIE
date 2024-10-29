@@ -51,6 +51,7 @@ const Settingtab = () => {
                     borderRadius="$4"
                     px="$4"
                     editable={false}
+                    value="Tran Huu Dung"
                 />
                 {/* Email Input */}
                 <Input
@@ -61,6 +62,7 @@ const Settingtab = () => {
                     borderRadius="$4"
                     px="$4"
                     editable={false}
+                    value="huudung2004kt@gmail.com"
                 />
                 {/* Subscription (Disabled) */}
                 <Input
