@@ -1,37 +1,37 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
+import { FontAwesome } from "@expo/vector-icons"
+import { Tabs } from "expo-router"
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import AntDesign from '@expo/vector-icons/AntDesign';
+const TabsLayout = () => {
+    return (
+        <Tabs
+            screenOptions={{
+                headerShown: false
+            }}
+        >
+            <Tabs.Screen name="home"
+                options={{
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+                }}
+            />
+            <Tabs.Screen name="movie"
+                options={{
+                    tabBarIcon: ({ color }) => <MaterialIcons name="movie" size={28} color={color} />
+                }}
+            />
+            <Tabs.Screen name="wishlist"
+                options={{
+                    tabBarIcon: ({ color }) => <FontAwesome6 name="heart-pulse" size={28} color={color} />
+                }}
+            />
+            <Tabs.Screen name="setting"
+                options={{
+                    tabBarIcon: ({ color }) => <AntDesign name="setting" size={28} color={color} />
+                }}
+            />
+        </Tabs>
+    )
 }
+
+export default TabsLayout
